@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Common-notice</title>
+    <meta charset="UTF-8">
+     
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,900;1,400&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- jquery,javascript -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+     
+    <style>
+      * {
+  box-sizing: border-box;
+}
+
+      .column {
+  margin-top: 3%;
+  margin-left: 3%;
+  float: left;
+  width: 22%;
+
+  padding: 15px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+.link{
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ margin-left: 40%;
+ margin-top: 10%;
+ background-color:whitesmoke;
+}
+ .doc{
+   width: 300px;
+   height: 200px;
+ }
+    </style>
+  </head>
+  <body> 
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top  " style="z-index: 1;">
+      <div class="container">
+        <a class="navbar-brand" href="#">WITimes</a>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              
+            </li>
+              
+  
+            
+          </ul>
+          
+      </div>
+    </nav>
+   
+   
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+      <header>Dashboard</header>
+    <ul>
+  <li><a href="/login"><i class="fas fa-qrcode"></i>Home</a></li>
+  <li >
+      <form method="POST" action="/logout">
+          <button type="submit" class="btn1 btn1-primary"><a ><i class="fas fa-sign-out-alt"></i>Log Out</a>  </button>
+      </form>
+    </li>
+  <li> <a href="/register"><i class="fas fa-user-graduate"></i>Student Register</a></li>
+  <li><a href="#"><i class="fas fa-stream"></i>Curricular</a></li>
+  <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+  <li><a href="/register">  <i class="fas fa-user-tie"></i>Faculty Register</a></li>
+  <li><a href="/noticeboard"> <i class="fas fa-scroll"></i>Notice board</a></li>
+   
+  </ul>
+  </div>
+   
+  
+   
+    <div class="row">
+      <%rows.forEach(function(row){%>
+      <div class="column">
+        <embed class="doc"  src="https://firebasestorage.googleapis.com/v0/b/witimes-f9925.appspot.com/o/<%=row.imgid%>?alt=media" width="100%"/> 
+        <a class="link" href="https://firebasestorage.googleapis.com/v0/b/witimes-f9925.appspot.com/o/<%=row.imgid%>?alt=media#toolbar=1">Open</a>
+        <hr>
+    
+       
+      </div>
+      
+      <%})%>
+      </div>
+    
+      
+   
+ 
+      </body>
+      </html>

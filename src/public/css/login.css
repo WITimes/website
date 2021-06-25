@@ -1,0 +1,100 @@
+body,html{
+    height: 100%;
+  }
+   
+  body {
+    font-family: "Montserrat-Black";
+      text-align: center;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: -webkit-linear-gradient(70.5deg,whitesmoke 50%,white 50%);
+   min-height: 300px;
+  }
+  
+   /* navbar section */
+   .navbar-nav a{
+    padding: 5px 10px;
+    margin: 7px;
+    color: black;
+    font-family: poppins;
+    font-size: 16px;
+    text-transform: uppercase;
+    }
+    .navbar-brand{
+      color:black;
+      font-family: poppins;
+    font-size: 28px;
+    }
+    .navbar-dark {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    }
+    .navbar-custom{
+      background-color: #644E5B;
+    }
+
+    .navbar-nav {
+    text-align: center;
+    }
+    .nav-link {
+    padding: .2rem 1rem;
+    }
+    .nav-link.active, .nav-link:focus {
+    color: black;
+    }
+    .navbar-toggler {
+    padding: 1px 5px;
+    font-size: 20px;
+    line-height: 0.3;
+    background: white;
+    }
+    .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: black;
+    }
+    
+    @media only screen and (max-width: 300px) {
+        .navbar-nav.ml-auto {
+        background: rgba(0, 0, 0, 0.5);
+    }
+     
+    .navbar-nav a {
+        font-size: 20px;
+        font-weight: normal;
+    }
+    }
+  
+  
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .top {
+    margin-bottom: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .middle{
+  border-radius: 0;
+  margin-bottom: -1px;
+  }
+  .bottom{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }

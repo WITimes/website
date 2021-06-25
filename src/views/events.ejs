@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,900;1,400&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- jquery,javascript -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     
+</head>
+<body>
+    <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top  " style="z-index: 1;">
+    <div class="container">
+      <a class="navbar-brand" href="#">WITimes</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+                 <a style="color: white;">Welcome  "<%= user.fullname %>"</a> 
+          </li>
+          
+        </ul>
+        
+    </div>
+  </nav>
+ 
+ 
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>Dashboard</header>
+  <ul>
+<li><a href="/homepage"><i class="fas fa-qrcode"></i>Home</a></li>
+<li >
+    <form method="POST" action="/logout">
+        <button type="submit" class="btn1 btn1-primary"><a ><i class="fas fa-sign-out-alt"></i>Log Out</a>  </button>
+    </form>
+  </li>
+
+<li>
+  <form action="/display" method="POST" >
+    <button id="slide" class="btn1"> <a><i class="fas fa-stream"></i>Curricular</a></button>
+  </form>
+</li>
+<li><a href="/events"><i class="fas fa-calendar-week"></i>Events</a></li>
+
+<li><a href="/homepage"> <i class="fas fa-scroll"></i>Notice board</a></li>
+ 
+</ul>
+</div>
+<div id="box1">
+  <h1>ISTE</h1>
+  <p>Notices issued for ISTE cell</p>
+  <br>
+ 
+ 
+  <a href="/ISTEUpload"><button class="btn hide ISTE">Upload here</button></a>
+
+  <a>
+  <form action="/ISTEdisplay" method="POST" >
+    <button id="slide" class="btn">View Notices</button>
+  </form>
+  </a>
+  
+</div>
+
+<div id="box1">
+  <h1>SSDC</h1>
+  <p>All the campus related notices </p>
+  <br>
+  <a href="/SSDCupload"><button class="btn hide SSDC">Upload here</button></a>
+  <a>
+  <form action="/SSDCdisplay" method="POST" >
+    <button id="slide" class="btn">View Notices</button>
+  </form>
+  </a>
+</div>
+
+<div id="box1">
+  <h1>WITech</h1>
+  <p></p>
+  <br>
+  <a href="/WITechnotice"><button class="btn hide WITech">Upload here</button></a>
+  <a>
+  <form action="/WITechdisplay" method="POST" >
+    <button id="slide" class="btn">View Notices</button>
+  </form>
+  </a>
+</div> 
+<script>
+  $( document ).ready(function() {
+    //console.log("<%=user.role %>");
+    if("<%=user.role %>"=='Student'){
+          $(".hide").attr("style","display:none;"); 
+    }
+    
+  });
+  // $( document ).ready(function() {
+  //   //console.log("<%=user.role %>");
+  //   if("<%=user.role %>"=='NSS'){
+  //         $(".nss").attr("style","display:;"); 
+  //   }
+  //   else{
+  //     $(".nss").attr("style","display:none;"); 
+  //   }
+  // });
+    $( document ).ready(function() {
+    //console.log("<%=user.role %>");
+    if("<%=user.role %>"=='ISTE Co-ordinator'){
+          $(".ISTE").attr("style","display:;"); 
+    }
+    else{
+      $(".ISTE").attr("style","display:none;"); 
+    }
+  });
+    $( document ).ready(function() {
+    //console.log("<%=user.role %>");
+    if("<%=user.role %>"=='SSDC Co-ordinator'){
+          $(".SSDC").attr("style","display:;"); 
+    }
+    else{
+      $(".SSDC").attr("style","display:none;"); 
+    }
+  });
+  $( document ).ready(function() {
+    //console.log("<%=user.role %>");
+    if("<%=user.role %>"=='WITech Co-ordinator'){
+          $(".WITech").attr("style","display:;"); 
+    }
+    else{
+      $(".WITech").attr("style","display:none;"); 
+    }
+  
+     
+    
+});
+ 
+</script>
+</body>
+</html>
+      

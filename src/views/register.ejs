@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+            <div class="col-5 mt-2">
+                <div>
+                    <% if(errors != "") { %>
+                        <% errors.forEach((item) => { %>
+                            <div class="alert alert-danger">
+                                <%- item %>
+                            </div>
+                        <% }); %>
+                    <% } %>
+                </div>
+                <form method="POST" action="/register">
+                    <div class="form-group">
+                        <label for="enrid">Enrollment ID: (*)</label>
+                        <input type="text" name="enrid" class="form-control" id="enrid" placeholder="Enter enrollment id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full name:</label>
+                        <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address: (*)</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Branch">Branch: (*)</label>
+                        <select class="form-control" id="branch" name="branch" required>
+                            <option value="CSE"selected>CSE</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="IT">IT</option>
+                            <option value="ENTC">ENTC</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Civil">Civil</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role: (*)</label>
+                        <select class="form-control" id="role" name="role" required>
+                            <option value="Student"selected>Student</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="TNP">TNP</option>
+                            <option value="NSS">NSS</option>
+                            <option value="ISTE Co-ordinator">ISTE Co-ordinator</option>
+                            <option value="SSDC Co-ordinator">SSDC Co-ordinator</option>
+                            <option value="WITech Co-ordinator">WITech Co-ordinator</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password: (*)</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordConfirmation">Confirm password: (*)</label>
+                        <input type="password" class="form-control" name="passwordConfirmation" id="passwordConfirmation" placeholder="Password Confirmation" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+
+                <hr>
+                <div>
+                    If you already have had an account. <a href="/login">Log in</a>.
+                </div>
+                <div>
+                    Return to <a href="/">Home Page</a>
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

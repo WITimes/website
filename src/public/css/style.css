@@ -1,0 +1,210 @@
+body {
+	font-family: "Montserrat-Black";
+	text-align: center;
+	background-color:rgb(226, 226, 226);
+  }
+  *body,*html{
+	  margin: 0;
+	  padding: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  h1,h2,h3,h4,h5,h6 {
+	  font-family: 'Montserrat-bold';
+  }
+  p {
+	color:black;
+  }
+   .image{
+	  height: auto;
+	  min-height: 300px;
+	  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://upload.wikimedia.org/wikipedia/commons/3/3d/WIT_Main_Building.jpg");
+	  width: auto;
+	  background-position: center;
+	  }
+	  
+	  
+  /* navbar section */
+  .navbar-nav a {
+  padding: 5px 10px;
+  margin: 7px;
+  font-family: poppins;
+  font-size: 16px;
+  text-transform: uppercase;
+  }
+  .navbar-dark{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    }
+  
+   .navbar-custom{
+      background-color: #644E5B;
+    }
+  
+  .navbar-nav {
+  text-align: center;
+  }
+  .nav-link {
+  padding: .2rem 1rem;
+  }
+  .nav-link.active, .nav-link:focus {
+  color: #fff;
+  }
+  .navbar-toggler {
+  padding: 1px 5px;
+  font-size: 20px;
+  line-height: 0.3;
+  color: black;
+  }
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: black;
+  }
+  
+  @media only screen and (max-width: 300px) {
+	  .navbar-nav.ml-auto {
+	  background: rgba(0, 0, 0, 0.5);
+  }
+   
+  .navbar-nav a {
+	  font-size: 20px;
+	  font-weight: normal;
+  }
+  }
+  /*header section*/
+   
+  /*Ticker section*/
+  .container1 {
+	  padding: 2px 18px;
+	  text-align: center;
+  }
+  
+  p{
+	  color: black;
+	  text-align: center;
+  
+  }
+  /* OUTER CONTAINER */
+  .tcontainer {
+	  width: 100%;
+	  overflow: hidden; /* Hide scroll bar */
+  }
+  
+  /* MIDDLE CONTAINER */
+  .ticker-wrap {
+	  width: 100%;
+	  padding-left: 100%; /* Push contents to right side of screen */
+  }
+  
+  /* INNER CONTAINER */
+  @keyframes ticker {
+	  0% { transform: translate3d(0, 0, 0); }
+	  100% { transform: translate3d(-100%, 0, 0); }
+  }
+  .ticker-move {
+	  /* Basically move items from right side of screen to left in infinite loop */
+	  display: inline-block;
+	  white-space: nowrap;
+	  padding-right: 100%;
+	  animation-iteration-count: infinite;
+	  animation-timing-function: linear;
+	  animation-name: ticker;
+	  animation-duration: 10s;
+  }
+  .ticker-move:hover{
+	  animation-play-state: paused; /* Pause scroll on mouse hover */
+  }
+  
+  /* ITEMS */
+  .ticker-item{
+	  display: inline-block; /* Lay items in a horizontal line */
+	  padding: 0 2rem;
+	  font-size: 20px;
+  
+  }
+  /* top-card section */
+  .card{
+		background-color:white;
+  }
+  .card-column {
+	padding: 3% 2%;
+  }
+  .icon{
+	  width: 120px;
+	  height: 120px;
+	  padding-left: 15px;
+	  padding-bottom: 20px;
+	  }
+  
+	  .para-text{
+	font-size: 1rem;
+  }
+  .heading-text{
+	  color:black;
+	font-size: 1.5rem;
+	  line-height: 1.5;
+  }
+  /* bottom-card section */
+  .bottom-card {
+	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	  transition: 0.3s;
+	  width: 14%;
+	  float:left;
+	  margin:15px;
+	  margin-left: 20px;
+  }
+  
+  .bottom-card:hover {
+	  box-shadow: 0 8px 16px 0 rgba(73, 17, 17, 0.4);
+	  margin-left: 10px;
+	  -ms-transform: scale(1); /* IE 9 */
+	  -webkit-transform: scale(1.5); /* Safari 3-8 */
+	  transform: scale(1.05);
+  }
+  .Img{
+	  width: 15px;
+	  height: 200px;
+  }
+  /* testimonial section*/
+  #testimonials {
+	background-color:#314455;
+  }
+  .testimonial-image {
+	width: 10%;
+	border-radius: 100%;
+	margin: 20px;
+  }
+  .testimonial-text{
+	color: white;
+  }
+  .colored-section{
+	 
+	color:grey;
+  }
+  .container-fluid {
+	  padding: 7% 15%;
+	}
+
+  /* Contact  */
+	.social{
+		   margin: 0;
+		   padding: 0;
+		   margin-left: 40%;
+	   }
+	   .social-icon{
+		   padding-left: 15px;
+		   color: grey; 
+			
+	   }
+	  h2{
+		  color:grey;
+	  }
+	   #about{
+		  background-color:#314455;
+		  color:white;
+		  text-align: left;
+		   
+		  padding: 40px;
+	   }
+     
